@@ -1,0 +1,169 @@
+===========================================
+Calligraphy & Math — Full pipeline run
+  per_class=100  seed=42
+===========================================
+
+--- Stage 0: build fonts.csv from METADATA.pb ---
+Scanning /home/pangea/Documents/ninaad/calligraphy-efd/data/google-fonts for METADATA.pb files...
+  Found 2012 fonts total.
+  Per-category counts in source:
+     -> DISPLAY: 501
+     -> HANDWRITING: 353
+        MONOSPACE: 45
+     -> SANS_SERIF: 752
+     -> SERIF: 361
+
+Sampling 100 per class with seed=42...
+  Selected 400 fonts total.
+
+Wrote fonts.csv
+
+--- Stages 1-5: full pipeline ---
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Glyph 'space' has a huge advance width (65534); is it intentional or an (invalid) negative value?
+Corpus: 400 fonts
+  exists on disk: 400/400
+  readable by fontTools: 400/400
+  per-class counts:
+    calligraphic: 100
+    display: 100
+    sans-serif: 100
+    serif: 100
+Extracted 10062 glyph contours from 400 fonts.
+Failures: 338 (first 5 shown)
+  ('NotoSerifNyiakengPuachueHmong', 'a', 'extraction returned None')
+  ('NotoSerifNyiakengPuachueHmong', 'b', 'extraction returned None')
+  ('NotoSerifNyiakengPuachueHmong', 'c', 'extraction returned None')
+  ('NotoSerifNyiakengPuachueHmong', 'd', 'extraction returned None')
+  ('NotoSerifNyiakengPuachueHmong', 'e', 'extraction returned None')
+Saved outlines to outputs/outlines.pkl
+Feature extraction: 10062 samples
+  classes: ['calligraphic', 'display', 'sans-serif', 'serif']
+  fonts:   387
+  feature dimension per order:
+    N=5: 17 features
+    N=10: 37 features
+    N=15: 57 features
+    N=20: 77 features
+    N=30: 117 features
+    N=40: 157 features
+Saved feature matrices to outputs/efd_features.npz
+[nearest_centroid | stratified]
+  macro-F1 = 0.313 [0.304, 0.322]
+[nearest_centroid | group]
+  macro-F1 = 0.308 [0.299, 0.317]
+[random_forest | stratified]
+  macro-F1 = 0.707 [0.698, 0.715]   best={'max_depth': None, 'min_samples_leaf': 2}
+[random_forest | group]
+  macro-F1 = 0.675 [0.666, 0.684]   best={'max_depth': None, 'min_samples_leaf': 2}
+[pca_logreg | stratified]
+  macro-F1 = 0.282 [0.274, 0.291]
+[pca_logreg | group]
+  macro-F1 = 0.280 [0.272, 0.288]
+[sensitivity: random_forest | group CV across orders]
+  N=  5  macro-F1=0.690 [0.681, 0.699]
+  N= 10  macro-F1=0.693 [0.684, 0.702]
+  N= 15  macro-F1=0.685 [0.676, 0.694]
+  N= 20  macro-F1=0.675 [0.666, 0.684]
+  N= 30  macro-F1=0.659 [0.651, 0.668]
+  N= 40  macro-F1=0.649 [0.639, 0.658]
+Saved classification results to outputs/classification_results.json
+Drawing Fig 1: PCA scatter
+Drawing Fig 2: harmonic reconstruction grid
+Drawing Fig 3: accuracy vs harmonics
+Drawing Fig 4: feature importance (MDI + permutation)
+Drawing diagnostic: confusion matrix
+  fig1: outputs/figures/fig1_pca_scatter.png
+  fig2: outputs/figures/fig2_harmonic_reconstruction.png
+  fig3: outputs/figures/fig3_accuracy_vs_harmonics.png
+  fig4: outputs/figures/fig4_feature_importance.png
+  diag: outputs/figures/diag_confusion_matrix.png
+
+Done. Outputs in outputs/
+classification_results.json
+efd_features.npz
+figures
+fonts.csv
+outlines.pkl
+run.log
+diag_confusion_matrix.png
+fig1_pca_scatter.png
+fig2_harmonic_reconstruction.png
+fig3_accuracy_vs_harmonics.png
+fig4_feature_importance.png
