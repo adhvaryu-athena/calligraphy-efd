@@ -28,3 +28,14 @@ env/
 .idea/
 *.swp
 *~
+
+# --- macOS metadata ---
+._.DS_Store
+**/._.DS_Store
+
+# --- Claude Code agent worktrees ---
+.claude/worktrees/
+
+# --- Diagnostic / scratch outputs ---
+outputs/diagnostic_*.csv
+outputs/run.log
