@@ -5,12 +5,25 @@ End-to-end Python pipeline for the research project *Classifying Typeface Styles
 ## Quick start
 
 ```bash
-pip install -r requirements.txt
+# 1. Conda env (recommended)
+conda env create -f environment.yml
+conda activate calligraphy-efd
+
+# 2. Font corpus (~1.2 GB shallow clone)
 git clone --depth 1 https://github.com/google/fonts.git data/google-fonts
+
+# 3. Run
 ./run_full.sh                  # 100 fonts/class, seed 42, ~5 min on a laptop
 ```
 
 That generates `fonts.csv`, runs all five pipeline stages, and writes outputs to `outputs/` including five publication-ready PNG figures.
+
+**Alternative install (pip-only, no conda):**
+
+```bash
+python3.10 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ## What it does
 
@@ -85,13 +98,15 @@ The pipeline is filesystem-portable. On the rig:
 git clone https://github.com/adhvaryu-athena/calligraphy-efd.git
 cd calligraphy-efd
 
-# 2. Set up Python
-pip install -r requirements.txt
+# 2. Conda env (recommended; assumes miniconda/anaconda installed)
+conda env create -f environment.yml
+conda activate calligraphy-efd
 
-# 3. Get the font corpus (1.2 GB shallow clone)
+# 3. Font corpus (1.2 GB shallow clone)
 git clone --depth 1 https://github.com/google/fonts.git data/google-fonts
 
 # 4. Run
+chmod +x run_full.sh
 ./run_full.sh 100
 ```
 
