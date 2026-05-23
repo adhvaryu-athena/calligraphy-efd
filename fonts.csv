@@ -1,0 +1,21 @@
+font_name,style_class,google_category,filepath,notes
+Lora,serif,SERIF,data/google-fonts/ofl/lora/Lora[wght].ttf,Open-source workhorse serif from Cyreal.
+EBGaramond,serif,SERIF,data/google-fonts/ofl/ebgaramond/EBGaramond[wght].ttf,Classical old-style serif.
+PlayfairDisplay,serif,SERIF,data/google-fonts/ofl/playfairdisplay/PlayfairDisplay[wght].ttf,Modern serif with high contrast; Google calls it SERIF.
+Cormorant,serif,SERIF,data/google-fonts/ofl/cormorant/Cormorant[wght].ttf,Refined Garamond-inspired serif.
+CrimsonText,serif,SERIF,data/google-fonts/ofl/crimsontext/CrimsonText-Regular.ttf,Old-style serif intended for book typography.
+Inter,sans-serif,SANS_SERIF,"data/google-fonts/ofl/inter/Inter[opsz,wght].ttf",Modern UI sans-serif.
+Roboto,sans-serif,SANS_SERIF,"data/google-fonts/ofl/roboto/Roboto[wdth,wght].ttf",Google's flagship neo-grotesque sans.
+OpenSans,sans-serif,SANS_SERIF,"data/google-fonts/ofl/opensans/OpenSans[wdth,wght].ttf",Humanist sans by Steve Matteson.
+WorkSans,sans-serif,SANS_SERIF,data/google-fonts/ofl/worksans/WorkSans[wght].ttf,Neutral text sans-serif.
+Nunito,sans-serif,SANS_SERIF,data/google-fonts/ofl/nunito/Nunito[wght].ttf,Rounded humanist sans.
+GreatVibes,calligraphic,HANDWRITING,data/google-fonts/ofl/greatvibes/GreatVibes-Regular.ttf,Formal English Roundhand script.
+DancingScript,calligraphic,HANDWRITING,data/google-fonts/ofl/dancingscript/DancingScript[wght].ttf,Lively casual script.
+Sacramento,calligraphic,HANDWRITING,data/google-fonts/ofl/sacramento/Sacramento-Regular.ttf,Monoline brush script.
+PinyonScript,calligraphic,HANDWRITING,data/google-fonts/ofl/pinyonscript/PinyonScript-Regular.ttf,Delicate copperplate script.
+Allura,calligraphic,HANDWRITING,data/google-fonts/ofl/allura/Allura-Regular.ttf,Formal English roundhand script.
+Lobster,display,HANDWRITING,data/google-fonts/ofl/lobster/Lobster-Regular.ttf,"Google labels HANDWRITING; we relabel display per audit (heavy weight, intended for headlines)."
+Bungee,display,DISPLAY,data/google-fonts/ofl/bungee/Bungee-Regular.ttf,Vertical-display geometric.
+AbrilFatface,display,DISPLAY,data/google-fonts/ofl/abrilfatface/AbrilFatface-Regular.ttf,Modern fat-face display serif; the display character outweighs the serif structure here.
+Monoton,display,DISPLAY,data/google-fonts/ofl/monoton/Monoton-Regular.ttf,Layered art-deco display.
+Pacifico,display,HANDWRITING,data/google-fonts/ofl/pacifico/Pacifico-Regular.ttf,"Google labels HANDWRITING; we relabel display per audit (used as a display face on the web)."

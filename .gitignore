@@ -1,0 +1,30 @@
+# --- Font corpus (1+ GB, must be downloaded separately) ---
+data/google-fonts/
+
+# --- Pipeline runtime artifacts (regenerated per run) ---
+# We DO keep outputs/ in the initial commit as a reference of the calibration run.
+# Comment the next line out if you want subsequent runs to be gitignored.
+# outputs/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# --- Virtual environments ---
+venv/
+env/
+.venv/
+.env
+
+# --- OS / editor ---
+.vscode/
+.idea/
+*.swp
+*~

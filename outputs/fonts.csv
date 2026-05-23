@@ -1,0 +1,21 @@
+font_name,style_class,google_category,filepath,notes,abs_path,exists,readable
+Lora,serif,SERIF,data/google-fonts/ofl/lora/Lora[wght].ttf,Open-source workhorse serif from Cyreal.,data/google-fonts/ofl/lora/Lora[wght].ttf,True,True
+EBGaramond,serif,SERIF,data/google-fonts/ofl/ebgaramond/EBGaramond[wght].ttf,Classical old-style serif.,data/google-fonts/ofl/ebgaramond/EBGaramond[wght].ttf,True,True
+PlayfairDisplay,serif,SERIF,data/google-fonts/ofl/playfairdisplay/PlayfairDisplay[wght].ttf,Modern serif with high contrast.,data/google-fonts/ofl/playfairdisplay/PlayfairDisplay[wght].ttf,True,True
+Cormorant,serif,SERIF,data/google-fonts/ofl/cormorant/Cormorant[wght].ttf,Refined Garamond-inspired serif.,data/google-fonts/ofl/cormorant/Cormorant[wght].ttf,True,True
+CrimsonText,serif,SERIF,data/google-fonts/ofl/crimsontext/CrimsonText-Regular.ttf,Old-style serif intended for book typography.,data/google-fonts/ofl/crimsontext/CrimsonText-Regular.ttf,True,True
+Inter,sans-serif,SANS_SERIF,"data/google-fonts/ofl/inter/Inter[opsz,wght].ttf",Modern UI sans-serif.,"data/google-fonts/ofl/inter/Inter[opsz,wght].ttf",True,True
+Roboto,sans-serif,SANS_SERIF,"data/google-fonts/ofl/roboto/Roboto[wdth,wght].ttf",Google's flagship neo-grotesque sans.,"data/google-fonts/ofl/roboto/Roboto[wdth,wght].ttf",True,True
+OpenSans,sans-serif,SANS_SERIF,"data/google-fonts/ofl/opensans/OpenSans[wdth,wght].ttf",Humanist sans by Steve Matteson.,"data/google-fonts/ofl/opensans/OpenSans[wdth,wght].ttf",True,True
+WorkSans,sans-serif,SANS_SERIF,data/google-fonts/ofl/worksans/WorkSans[wght].ttf,Neutral text sans-serif.,data/google-fonts/ofl/worksans/WorkSans[wght].ttf,True,True
+Nunito,sans-serif,SANS_SERIF,data/google-fonts/ofl/nunito/Nunito[wght].ttf,Rounded humanist sans.,data/google-fonts/ofl/nunito/Nunito[wght].ttf,True,True
+GreatVibes,calligraphic,HANDWRITING,data/google-fonts/ofl/greatvibes/GreatVibes-Regular.ttf,Formal English Roundhand script.,data/google-fonts/ofl/greatvibes/GreatVibes-Regular.ttf,True,True
+DancingScript,calligraphic,HANDWRITING,data/google-fonts/ofl/dancingscript/DancingScript[wght].ttf,Lively casual script.,data/google-fonts/ofl/dancingscript/DancingScript[wght].ttf,True,True
+Sacramento,calligraphic,HANDWRITING,data/google-fonts/ofl/sacramento/Sacramento-Regular.ttf,Monoline brush script.,data/google-fonts/ofl/sacramento/Sacramento-Regular.ttf,True,True
+PinyonScript,calligraphic,HANDWRITING,data/google-fonts/ofl/pinyonscript/PinyonScript-Regular.ttf,Delicate copperplate script.,data/google-fonts/ofl/pinyonscript/PinyonScript-Regular.ttf,True,True
+Allura,calligraphic,HANDWRITING,data/google-fonts/ofl/allura/Allura-Regular.ttf,Formal English roundhand script.,data/google-fonts/ofl/allura/Allura-Regular.ttf,True,True
+Lobster,display,HANDWRITING,data/google-fonts/ofl/lobster/Lobster-Regular.ttf,Google labels HANDWRITING; we relabel display per audit.,data/google-fonts/ofl/lobster/Lobster-Regular.ttf,True,True
+Bungee,display,DISPLAY,data/google-fonts/ofl/bungee/Bungee-Regular.ttf,Vertical-display geometric.,data/google-fonts/ofl/bungee/Bungee-Regular.ttf,True,True
+AbrilFatface,display,DISPLAY,data/google-fonts/ofl/abrilfatface/AbrilFatface-Regular.ttf,Modern fat-face display serif.,data/google-fonts/ofl/abrilfatface/AbrilFatface-Regular.ttf,True,True
+Monoton,display,DISPLAY,data/google-fonts/ofl/monoton/Monoton-Regular.ttf,Layered art-deco display.,data/google-fonts/ofl/monoton/Monoton-Regular.ttf,True,True
+Pacifico,display,HANDWRITING,data/google-fonts/ofl/pacifico/Pacifico-Regular.ttf,Google labels HANDWRITING; we relabel display per audit.,data/google-fonts/ofl/pacifico/Pacifico-Regular.ttf,True,True

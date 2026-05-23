@@ -1,0 +1,4 @@
+Cloning into 'google-fonts'...
+warning: unable to unlink '/sessions/wonderful-fervent-hopper/mnt/Lasya Chakravarthy - 2029/code/data/google-fonts/.git/config.lock': Operation not permitted
+error: could not lock config file /sessions/wonderful-fervent-hopper/mnt/Lasya Chakravarthy - 2029/code/data/google-fonts/.git/config: File exists
+fatal: could not set 'remote.origin.fetch' to '+refs/heads/main:refs/remotes/origin/main'
