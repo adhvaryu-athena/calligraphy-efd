@@ -24,6 +24,7 @@ Output of run(): a nested dict {font_name: {glyph_char: np.ndarray (N_POINTS, 2)
 """
 
 from __future__ import annotations
+import logging
 import pickle
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -32,6 +33,8 @@ import numpy as np
 import pandas as pd
 from fontTools.ttLib import TTFont
 from fontTools.pens.basePen import BasePen
+
+_logger = logging.getLogger(__name__)
 
 
 # Tunables
@@ -169,6 +172,102 @@ def extract_glyph_contour(
     if outer is None:
         return None
     return resample_arc_length(outer, n_points=n_points)
+
+
+def classify_subpaths(glyph, font) -> Optional[Dict]:
+    """Walk all sub-paths of glyph, classify into outer/true_counter/component.
+
+    Parameters
+    ----------
+    glyph : glyph object from font.getGlyphSet() (supports .draw())
+    font  : the TTFont object (used to obtain the glyph set for ContourPen)
+
+    Returns
+    -------
+    dict with keys:
+        "outer"              : np.ndarray — resampled outer contour
+        "true_counters"      : list of np.ndarray — sub-paths with opposite winding
+        "components"         : list of np.ndarray — sub-paths with same winding as outer
+        "n_tc"               : int — number of true counters
+        "n_comp"             : int — number of component sub-paths
+        "outer_area"         : float — |signed_area| of outer sub-path
+        "total_counter_area" : float — sum of |signed_area| for true counters
+
+    Returns None if glyph.draw() raises an exception.
+    Falls back to outer-only (empty counters/components) if any area is zero
+    or if no valid sub-paths exist.
+    """
+    pen = ContourPen(font.getGlyphSet(), points_per_segment=DEFAULT_POINTS_PER_SEGMENT)
+    try:
+        glyph.draw(pen)
+    except Exception as exc:
+        _logger.warning("classify_subpaths: glyph.draw() failed: %s", exc)
+        return None
+
+    # Filter sub-paths with fewer than 4 points
+    arrays = [np.asarray(c, dtype=float) for c in pen.contours if len(c) >= 4]
+    if not arrays:
+        _logger.warning("classify_subpaths: no valid sub-paths (all < 4 points)")
+        return {
+            "outer": None,
+            "true_counters": [],
+            "components": [],
+            "n_tc": 0,
+            "n_comp": 0,
+            "outer_area": 0.0,
+            "total_counter_area": 0.0,
+        }
+
+    areas = [signed_area(a) for a in arrays]
+
+    # Pick sub-path with largest |signed_area| as outer
+    abs_areas = [abs(a) for a in areas]
+    outer_idx = int(np.argmax(abs_areas))
+    outer_arr = arrays[outer_idx]
+    outer_signed = areas[outer_idx]
+    outer_area = abs(outer_signed)
+
+    # Edge case: outer area is zero
+    if outer_area == 0.0:
+        _logger.warning("classify_subpaths: outer sub-path has zero area — returning outer-only")
+        return {
+            "outer": outer_arr,
+            "true_counters": [],
+            "components": [],
+            "n_tc": 0,
+            "n_comp": 0,
+            "outer_area": 0.0,
+            "total_counter_area": 0.0,
+        }
+
+    true_counters: List[np.ndarray] = []
+    components: List[np.ndarray] = []
+
+    for i, (arr, area) in enumerate(zip(arrays, areas)):
+        if i == outer_idx:
+            continue
+        if area == 0.0:
+            _logger.warning(
+                "classify_subpaths: sub-path %d has zero area — skipping classification", i
+            )
+            continue
+        # Opposite sign → true counter (hole); same sign → component (overlay)
+        if (area > 0) != (outer_signed > 0):
+            true_counters.append(arr)
+        else:
+            components.append(arr)
+
+    total_counter_area = sum(abs(signed_area(tc)) for tc in true_counters)
+
+    return {
+        "outer": outer_arr,
+        "true_counters": true_counters,
+        "components": components,
+        "n_tc": len(true_counters),
+        "n_comp": len(components),
+        "outer_area": outer_area,
+        "total_counter_area": total_counter_area,
+    }
 
 
 def run(

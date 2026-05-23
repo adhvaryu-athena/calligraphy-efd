@@ -9,14 +9,32 @@ feature length is 4 * N - 3.
 build_feature_matrices() computes the matrix at multiple orders in one pass
 so Stage 4 (classification) and Stage 5 (sensitivity curve) can re-use it
 without re-extraction.
+
+Feature Configs
+---------------
+This module implements Config A (outer contour EFD only).  Counter-aware
+feature extraction (Configs B and C) is implemented in src/counters.py:
+
+  Config A: outer EFD only.         Feature length = 4*N - 3.
+  Config B: outer EFD + scalars.    Feature length = 4*N.
+            Scalars = [n_tc, counter_area_ratio, n_comp].
+  Config C: outer + counter EFD + scalars.  Feature length = 8*N - 3.
+            Falls back to Config B (zero-padded) when n_tc != 1.
+
+The run() function here accepts a config= parameter for forward compatibility
+but only implements Config A natively; passing "B" or "C" logs a warning and
+delegates to Config A behaviour.
 """
 
 from __future__ import annotations
+import logging
 from pathlib import Path
 from typing import Dict, List, Tuple
 
 import numpy as np
 from pyefd import elliptic_fourier_descriptors
+
+_logger = logging.getLogger(__name__)
 
 
 DEFAULT_ORDERS: Tuple[int, ...] = (5, 10, 15, 20, 30, 40)
@@ -104,12 +122,26 @@ def run(
     normalize: bool = True,
     output_path: str | Path | None = None,
     verbose: bool = True,
+    config: str = "A",
 ) -> Dict[int, Dict]:
     """Stage 3 entry point. Returns dict keyed by harmonic order.
 
     If output_path is given, saves as a single .npz with arrays:
         X_{order}, y, groups, glyphs, and a meta JSON in the file's .info attr.
+
+    Parameters
+    ----------
+    config : "A", "B", or "C".  Only "A" is natively implemented here.
+             Passing "B" or "C" logs a warning and proceeds as Config A for
+             backward compatibility.  Use src.counters.extract_glyph_features()
+             for counter-aware extraction.
     """
+    if config in ("B", "C"):
+        _logger.warning(
+            "Config %s not yet implemented in efd.run(); "
+            "use counters.extract_glyph_features() directly.  Proceeding as Config A.",
+            config,
+        )
     feats = build_feature_matrices(outlines, label_map, orders=orders, normalize=normalize)
     if verbose:
         sample_order = next(iter(feats))

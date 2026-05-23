@@ -206,4 +206,26 @@ def run(
             json.dump(results, f, indent=2)
         if verbose:
             print(f"Saved classification results to {output_path}")
+
+    save_fold_indices(feats, primary_order=primary_order, n_splits=n_splits, seed=seed)
+
     return results
+
+
+def save_fold_indices(
+    feats: Dict,
+    primary_order: int = 20,
+    n_splits: int = 5,
+    seed: int = 42,
+    output_path: str = "outputs/fold_indices.pkl",
+) -> Dict:
+    """Save cross-validation fold indices to a pickle file."""
+    import pickle
+    bundle = feats[primary_order]
+    X, y, groups = bundle["X"], bundle["y"], bundle["groups"]
+    folds = {}
+    for cv_type in ("stratified", "group"):
+        folds[cv_type] = list(_split_iter(X, y, groups, cv_type, n_splits, seed))
+    with open(output_path, "wb") as f:
+        pickle.dump(folds, f)
+    return folds
